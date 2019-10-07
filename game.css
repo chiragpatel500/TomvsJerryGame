@@ -1,0 +1,183 @@
+body {
+  text-align: center;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+main {
+  max-width: 1000px;
+  background-color: #f0f0f0;
+  margin: 100px auto;
+  display: flex;
+}
+
+aside {
+  width: 200px;
+  height: auto;
+}
+
+#map {
+  width: 600px;
+  background-color: #fff;
+
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+}
+
+#map > div {
+  background-color: #f7ecdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#map > div > img {
+  width: 35px;
+}
+
+h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #356d65;
+  font-size: 75px;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: 50 px;
+}
+
+h3 {
+  text-align: center;
+  border: dotted;
+  color: #356d65;
+}
+
+aside {
+  font-size: 25px;
+  background-color: #356d65;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#jerrypic,
+#tompic {
+  border-radius: 50%;
+}
+
+aside div > span {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  border-radius: 50px;
+  padding: 4px 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#newGame,
+#rules {
+  color: white;
+  background-color: #356d65;
+  border: 0;
+  border-radius: 4px;
+  padding: 7px 15px;
+}
+
+.currentPlayer {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.959);
+}
+
+.jerry.currentPlayer #jerrypic,
+.tom.currentPlayer #tompic {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 0 10px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.highlight {
+  background-color: #f1cbb5 !important;
+  cursor: pointer;
+}
+
+#tompic,
+#jerrypic {
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+#closeRules {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#rulesModal,
+#gameModal,
+#shieldModal {
+  display: none;
+  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.shieldBtn {
+  text-align: center;
+  background-color: #f7ecdf;
+  color: #356d65;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 7px 15px;
+}
+
+#rulesModal::before,
+#gameModal::before,
+#shieldModal::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 998;
+}
+
+#rulelist {
+  background-color: burlywood;
+  padding: 40px;
+  list-style: none;
+  z-index: 999;
+  position: relative;
+  border: dotted;
+  border-color: #fff;
+  text-align: left;
+}
+
+.modalContent {
+  background-color: #356d65;
+  padding: 40px;
+  position: relative;
+  z-index: 999;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+#weapon1 img,
+#weapon2 img {
+  width: 50px;
+}
+
+.modal-dialog {
+  width: 300px;
+  margin: 30px auto;
+}

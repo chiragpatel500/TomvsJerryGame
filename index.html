@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Board Game</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="game.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Tom vs Jerry</h1>
+        <button id="newGame">New Game</button> <button id="rules">Rules</button>
+      </header>
+
+      <main>
+        <aside class="tom">
+          <h2>Tom</h2>
+          <span><img id="tompic" src="images/tom.png" alt=""/></span>
+          <h5>Health</h5>
+          <span><i class="fas fa-heartbeat fa-lg"></i></span>
+          <div><span id="health1" class="pill">0</span></div>
+          <h5>Attack</h5>
+          <div id="weapon1"><i class="fas fa-paw fa-lg"></i></div>
+          <div><span id="attack1" class="pill">0</span></div>
+          <h5>Shield</h5>
+          <span><i class="fas fa-shield-alt fa-lg"></i></span>
+          <div><span id="shield1" class="pill"></span></div>
+        </aside>
+        <div id="map"></div>
+        <aside class="jerry">
+          <h2>Jerry</h2>
+          <span><img id="jerrypic" src="images/jerry.png" alt=""/></span>
+          <h5>Health</h5>
+          <span><i class="fas fa-heartbeat fa-lg"></i></span>
+          <div><span id="health2" class="pill">0</span></div>
+          <h5>Attack</h5>
+          <div id="weapon2"><i class="fas fa-paw fa-lg"></i></div>
+          <div><span id="attack2" class="pill">0</span></div>
+          <h5>Shield</h5>
+          <span><i class="fas fa-shield-alt fa-lg"></i></span>
+          <div><span id="shield2" class="pill"></span></div>
+        </aside>
+      </main>
+    </div>
+
+    <div id="rulesModal">
+      <div id="rulelist">
+        <button id="closeRules">&times;</button>
+        <h3>Rules list</h3>
+        <ul>
+          <li>Each player hits only once in a turn</li>
+          <li>Once the health is down to zero the player must withdraw</li>
+          <li>Each player has only 1 life</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="gameModal">
+      <div id="rulelist">
+        <button id="closeModal">&times;</button>
+        <h2>Winner: <span id="winner"></span></h2>
+      </div>
+    </div>
+
+    <div id="shieldModal">
+      <div class="modalContent">
+        <h2>Shield Position</h2>
+        <button class="shieldBtn" data-status="up">Up</button>
+        <button class="shieldBtn" data-status="down">Down</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
