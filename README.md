@@ -1,6 +1,6 @@
 # TomvsJerryGame
 
-Project 6 by Frontend Path by Openclassrooms.com - turn-based-game Build a turn-based board game in JavaScript
+turn-based-game Build a turn-based board game in JavaScript
 
 Technologies: Javascript, jQuery, HTML5, CSS3.
 
